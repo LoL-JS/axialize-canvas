@@ -1,0 +1,472 @@
+//Variables
+$background-header-1: #edf6f3
+$background-header-2: #dbeee7
+$background-header-3: #b7ddcf
+$background-header-signed: #93cbb7
+$background-header-invoiced: #6fba9f
+$background-header-inc-paid: #4ba987
+$background-header-sum: #6a635d
+$background-header-out-paid: #d99a4d
+$background-header-to-pay: #e8c294
+$background-1: #f6fBf9
+$background-2: #f6fBf9
+$background-3: #edf6f3
+$background-signed: #edf6f3
+$background-invoiced: #edf6f3
+$background-inc-paid: #edf6f3
+$background-sum: #ececeb
+$background-out-paid: #fbf5ed
+$background-to-pay: #fbf5ed
+$background-late: #f9ccc7
+$font-color-header-1: #4ba987
+$font-color-header-2: #4ba987
+$font-color-header-3: #4ba987
+$font-color-header-signed: #ffffff
+$font-color-header-invoiced: #ffffff
+$font-color-header-inc-paid: #ffffff
+$font-color-header-sum: #ffffff
+$font-color-header-out-paid: #ffffff
+$font-color-header-to-pay: #ffffff
+$font-color-late: #ee7669
+$border-color: #b5b1ae
+
+$brand-primary: $background-header-out-paid
+$brand-success: $background-header-signed
+$brand-danger: $background-late
+
+$input-border-focus: $brand-success
+
+$navbar-default-color: #000
+$navbar-default-bg: #fff
+$navbar-default-link-color: $navbar-default-color
+$navbar-default-link-hover-color: #fff
+$navbar-default-link-hover-bg: #CDE8F0
+$navbar-default-link-active-bg: $navbar-default-link-hover-bg
+$navbar-default-link-active-color: $navbar-default-link-hover-color
+
+$border-radius-base: 2px
+$border-radius-large: 2px
+$border-radius-small: 2px
+
+@import bootstrap-sprockets
+@import bootstrap
+@import font-awesome-sprockets
+@import font-awesome
+@import toastr.min.css
+@import jquery.ui.core
+@import jquery.ui.theme
+@import jquery.ui.datepicker
+@import jquery.ui.slider
+@import date-picker
+
+
+@font-face
+  font-family: 'voltaireregular'
+  src: font_url('voltaire-regular-webfont.eot')
+  src: font_url('voltaire-regular-webfont.eot?#iefix') format('embedded-opentype'), font_url('voltaire-regular-webfont.woff') format('woff'), font_url('voltaire-regular-webfont.ttf') format('truetype'), font_url('voltaire-regular-webfont.svg#voltaireregular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'open_sans_condensedbold'
+  src: font_url('opensans-condbold-webfont.eot')
+  src: font_url('opensans-condbold-webfont.eot?#iefix') format('embedded-opentype'), font_url('opensans-condbold-webfont.woff') format('woff'), font_url('opensans-condbold-webfont.ttf') format('truetype'), font_url('opensans-condbold-webfont.svg#open_sans_condensedbold') format('svg')
+  font-weight: normal
+  font-style: normal
+
+
+
+@font-face
+  font-family: 'open_sanscondensed_light'
+  src: font_url('opensans-condlight-webfont.eot')
+  src: font_url('opensans-condlight-webfont.eot?#iefix') format('embedded-opentype'), font_url('opensans-condlight-webfont.woff') format('woff'), font_url('opensans-condlight-webfont.ttf') format('truetype'), font_url('opensans-condlight-webfont.svg#open_sanscondensed_light') format('svg')
+  font-weight: normal
+  font-style: normal
+
+html, body
+  height: 100%
+  width: 100%
+
+body
+  padding-top: 70px
+  font-family: voltaireregular
+  & #main-container
+    padding-bottom: 50px
+  &.transactions
+    padding-top: 50px
+    & #main-container
+      padding: 0
+
+a
+  cursor: pointer
+
+//.input-group
+//  display: inline-table
+//  vertical-align: middle
+//
+//  & .input-group-addon,.input-group-btn,.form-control
+//    width: auto !important
+
+.header-1, .header-2, .header-3, .header-signed, .header-invoiced,
+.header-inc-paid, .header-sum
+  text-align: center
+  border-bottom: 1px solid $background-header-sum
+  line-height: 35px
+  font-weight: normal
+  font-size: 13px
+  display: inline-block
+  //height: 86px
+  vertical-align: top
+  position: relative
+
+.header-2, .col-2, .header-signed, .col-signed, .header-invoiced, .col-invoiced, .header-inc-paid, .col-inc-paid,
+.header-sum, .col-sum
+  border-left: 1px solid $border-color
+
+.header-3, .col-3
+  border-left: 1px dashed $border-color
+
+.header-1
+  background-color: $background-header-1
+  color: $font-color-header-1
+  width: 12%
+
+.header-2
+  background-color: $background-header-2
+  color: $font-color-header-2
+  width: 12%
+
+.header-3
+  background-color: $background-header-3
+  color: $font-color-header-3
+  width: 12%
+
+.header-signed
+  background-color: $background-header-signed
+  color: $font-color-header-signed
+  width: 12%
+
+.header-invoiced
+  background-color: $background-header-invoiced
+  color: $font-color-header-invoiced
+  width: 12%
+
+.header-inc-paid
+  background-color: $background-header-inc-paid
+  color: $font-color-header-inc-paid
+  width: 12%
+
+.header-sum
+  background-color: $background-header-sum
+  color: $font-color-header-sum
+  width: 28%
+
+.col-1
+  background-color: $background-1
+
+.col-2
+  background-color: $background-2
+
+.col-3
+  background-color: $background-3
+
+.col-signed
+  background-color: $background-signed
+
+.col-invoiced
+  background-color: $background-invoiced
+
+.col-inc-paid
+  background-color: $background-inc-paid
+
+.today-before
+  border-top: 3px solid #0000ff
+  z-index: 999
+  margin-top: -3px
+
+.today-after
+  border-bottom: 3px solid #0000ff
+  z-index: 999
+  margin-top: -3px
+
+.col-sum
+  background-color: $background-sum
+  padding: 0
+  display: inline-block
+  width: 28%
+  height: 86px
+  vertical-align: top
+  position: relative
+
+.col-sum-bg
+  position: absolute
+  width: 50%
+  top: 0
+  height: 100%
+  background-position: center
+  background-repeat: repeat-x
+
+.loading-indicator
+  position: fixed
+  bottom: 20px
+  left: 20px
+  display: inline-block
+  height: 90px
+  width: 90px
+  background-image: asset_url('loading.gif')
+
+.transaction-box
+  border: 1px solid
+  padding: 3px
+  height: 70px
+  position: relative
+  display: inline-block
+  width: 100%
+  background-color: #ffffff
+  color: #000000
+  font-family: voltaireregular
+  font-size: 13px
+  max-width: 130px
+  cursor: pointer
+  text-align: right
+  border-right-width: 10px
+
+.transaction-box p
+  margin: 0
+
+.transaction-box .date
+  color: $background-header-sum !important
+  margin-top: 5px
+
+
+.transaction-box .comment
+  font-family: open_sans_condensedbold
+  color: $background-header-sum
+  font-size: 11px
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+  margin-top: 5px
+
+.solde-box
+  position: relative
+  border: none
+  border-top: 8px solid
+  text-align: center
+  width: 75%
+  margin: auto
+  background-color: #ffffff
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(50, 50, 50, 0.75)
+  -moz-box-shadow:    0px 0px 10px 5px rgba(50, 50, 50, 0.75)
+  box-shadow:         0px 0px 10px 5px rgba(50, 50, 50, 0.75)
+  font-size: 30px
+  color: $background-header-sum
+  padding: 6px 0
+  font-family: voltaireregular
+
+.solde-box .decimal
+  font-size: 0.7em
+
+.solde-box .date
+  color: $background-header-inc-paid
+
+.date
+  font-size: 11px
+  font-family: open_sans_condensedbold
+  letter-spacing: 0.5px
+  color: $background-header-sum
+
+.is-late .date
+  color: $font-color-late
+
+.solde-box:before
+  top: 0
+  left: 50%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+  border-top-color: inherit
+  border-width: 8px
+  margin-left: -8px
+
+.transaction-box:after
+  left: 100%
+  top: 50%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+  border-left-color: inherit
+  border-width: 6px
+  margin-top: -6px
+  margin-left: 10px
+
+.col-1, .col-2, .col-3, .col-signed, .col-invoiced, .col-inc-paid
+  background-position: center
+  background-repeat: repeat-x
+  position: relative
+  display: inline-block
+  width: 12%
+  height: 86px
+  vertical-align: top
+  padding: 8px
+  text-align: center
+
+.col-sum-bg
+  left: 0
+
+.is-1
+  & .col-1, .col-2, .col-3, .col-signed, .col-invoiced, .col-inc-paid, .col-sum-bg
+    background-image: asset_url("dot-1.png")
+
+.is-2
+  & .col-1, .col-2, .col-3, .col-signed, .col-invoiced, .col-inc-paid, .col-sum-bg
+    background-image: asset_url("dot-2.png")
+
+.is-3
+  & .col-1, .col-2, .col-3, .col-signed, .col-invoiced, .col-inc-paid, .col-sum-bg
+    background-image: asset_url("dot-3.png")
+
+.is-signed
+  & .col-1, .col-2, .col-3, .col-signed, .col-invoiced, .col-inc-paid, .col-sum-bg
+    background-image: asset_url("dot-signed.png")
+
+.is-invoiced
+  & .col-1, .col-2, .col-3, .col-signed, .col-invoiced, .col-inc-paid, .col-sum-bg
+    background-image: asset_url("dot-invoiced.png")
+
+.is-inc-paid
+  & .col-1, .col-2, .col-3, .col-signed, .col-invoiced, .col-inc-paid, .col-sum-bg
+    background-image: asset_url("dot-inc-paid.png")
+
+.is-1 .transaction-box
+  border-color: $background-header-1
+
+.is-2 .transaction-box
+  border-color: $background-header-2
+
+.is-3 .transaction-box
+  border-color: $background-header-3
+
+.is-signed .transaction-box
+  border-color: $background-header-signed
+
+.is-invoiced .transaction-box
+  border-color: $background-header-invoiced
+
+.is-inc-paid .transaction-box
+  border-color: $background-header-inc-paid
+
+.is-late .transaction-box
+  border-color: $font-color-late
+  background-color: $background-late
+
+.is-late .solde-box
+  border-color: $font-color-late
+
+.is-1 .solde-box
+  border-color: $background-header-1
+
+.is-2 .solde-box
+  border-color: $background-header-2
+
+.is-3 .solde-box
+  border-color: $background-header-3
+
+.is-signed .solde-box
+  border-color: $background-header-signed
+
+.is-invoiced .solde-box
+  border-color: $background-header-invoiced
+
+.is-inc-paid .solde-box
+  border-color: $background-header-inc-paid
+
+.is-late
+  & .col-1, .col-2, .col-3, .col-signed, .col-invoiced, .col-inc-paid, .col-sum-bg
+    background-image: asset_url("dot-late.png")
+
+.logo-axialize
+  background: asset_url('axialize_logo.png') no-repeat center
+  background-size: contain
+  width: 100px
+
+.axialize_illustration
+  display: inline-block
+  background-image: asset_url('axialize_illustration.png')
+  width: 360px
+  height: 360px
+  background-size: 100%
+
+.ember-list-view
+  overflow: auto
+  position: relative
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.ember-list-item-view
+  position: absolute
+  left: 0
+  right: 0
+  width: 100%
+  min-width: 960px
+  overflow: hidden
+
+.hover-cell
+  background-color: #d5e1e2
+
+#transaction-header
+  position: absolute
+  top: 1px
+  width: 100%
+  min-width: 960px
+  z-index: 1000
+
+.search-field
+  width: 130px !important
+  -webkit-transition: width .4s ease-in-out
+  -moz-transition: width .4s ease-in-out
+  -o-transition: width .4s ease-in-out
+  transition: width .4s ease-in-out
+
+.label-billing
+  display: inline-block
+  min-width: 100%
+  & small
+    color: inherit
+
+.form-group.required .control-label:after
+  content: "*"
+  color: red
+
+/*.search-field:focus
+  width: 185px !important
+  -webkit-transition: width .4s ease-in-out
+  -moz-transition: width .4s ease-in-out
+  -o-transition: width .4s ease-in-out
+  transition: width .4s ease-in-out
+  */
+
+.today-date
+  display: none
+
+.today-after, .today-before
+  & .today-date
+    display: inline-block
+    position: absolute
+    color: #0000ff
+    font-style: italic
+    z-index: 99999
+    margin-left: 3px
+
+.today-after .today-date
+  bottom: 0

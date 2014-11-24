@@ -1,0 +1,108 @@
+<div class="modal" style="display:block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form {{action 'save' on='submit'}}>
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true"{{action 'cancel'}}>&times;</button>
+                    <h4 class="modal-title">{{t 'transaction.edittransaction'}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div {{bind-attr class=":form-group :has-feedback model.errors.name:has-error :required"}}>
+                                <label for="field-name" class="control-label">{{t 'transaction.fields.name'}}</label>
+                                {{view Axialize.FocusedTextField value=model.name class="form-control" id="field-name"}}
+                                {{#if model.errors.name}}
+                                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                                    <ul class="help-block">
+                                        {{#each model.errors.name}}
+                                            <li>{{t 'transaction.fields.name'}} {{message}}</li>
+                                        {{/each}}
+                                    </ul>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div {{bind-attr class=":form-group :has-feedback model.errors.amount:has-error :required"}}>
+                                <label for="field-amount" class="control-label">{{t 'transaction.fields.amount'}}</label>
+                                {{input value=model.amount class="form-control" id="field-amount"}}
+                                {{#if model.errors.amount}}
+                                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                                    <ul class="help-block">
+                                        {{#each model.errors.amount}}
+                                            <li>{{t 'transaction.fields.amount'}} {{message}}</li>
+                                        {{/each}}
+                                    </ul>
+                                {{/if}}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div {{bind-attr class=":form-group :has-feedback model.errors.stageName:has-error"}}>
+                                <label for="field-stage-name" class="control-label">{{t 'transaction.fields.stagename'}}</label>
+                                {{view Ember.Select
+                                content=stageNames
+                                optionValuePath="content.masterLabel"
+                                optionLabelPath="content.masterLabel"
+                                value=model.stageName
+                                class="form-control" id="field-stage-name" }}
+                                {{#if model.errors.stageName}}
+                                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                                    <ul class="help-block">
+                                        {{#each model.errors.stageName}}
+                                            <li>{{t 'transaction.fields.stagename'}} {{message}}</li>
+                                        {{/each}}
+                                    </ul>
+                                {{/if}}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div {{bind-attr class=":form-group :has-feedback model.errors.closeDate:has-error :required"}}>
+                                <label for="field-close-date" class="control-label">{{t 'transaction.fields.closedate'}}</label>
+                                {{view Axialize.DatePicker date=model.closeDate class="form-control" id="field-close-date"}}
+                                {{#if model.errors.closeDate}}
+                                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                                    <ul class="help-block">
+                                        {{#each model.errors.closeDate}}
+                                            <li>{{t 'transaction.fields.closedate'}} {{message}}</li>
+                                        {{/each}}
+                                    </ul>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div {{bind-attr class=":form-group :has-feedback model.errors.description:has-error"}}>
+                                <label for="field-description" class="control-label">{{t 'transaction.fields.description'}}</label>
+                                {{textarea value=model.description class="form-control" id="field-description"}}
+                                {{#if model.errors.description}}
+                                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                                    <ul class="help-block">
+                                        {{#each model.errors.description}}
+                                            <li>{{t 'transaction.fields.description'}} {{message}}</li>
+                                        {{/each}}
+                                    </ul>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a target="_blank" {{bind-attr href="salesforceUrl"}}>{{t 'transaction.open'}}</a>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            {{t 'transaction.fields.owner'}}: <a href="#" {{action 'searchByName'}}>{{model.owner}}</a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" {{action 'cancel'}}>{{t 'transaction.close'}}</button>
+                    {{submit-button textTranslation='transaction.save' model=model}}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

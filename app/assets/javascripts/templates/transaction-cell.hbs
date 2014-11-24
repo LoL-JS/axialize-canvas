@@ -1,0 +1,9 @@
+{{#if view.showTransaction}}
+    {{transaction-box transaction=view.transaction action="editTransaction"}}
+{{else}}
+    {{#if view.dateToShow}}
+        <div class="date text-center" style="margin-top:40px">
+            {{format-date view.dateToShow}}
+        </div>
+    {{/if}}
+{{/if}}

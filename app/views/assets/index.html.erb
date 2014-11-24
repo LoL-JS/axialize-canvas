@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Axialize</title>
+  <%= favicon_link_tag %>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="sfdc-canvas-signed-request" content='<%=raw @json %>'>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript">
+    window.sr = JSON.parse('<%=raw @json %>');
+  </script>
+</head>
+<body>
+  <%= javascript_include_tag "application" %>
+</body>
+</html>

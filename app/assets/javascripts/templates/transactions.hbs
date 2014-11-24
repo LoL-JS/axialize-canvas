@@ -1,0 +1,7 @@
+{{#if arrangedContent}}
+    {{view Axialize.ListTransactions contentBinding="arrangedContent"}}
+{{else}}
+    <h4 class="text-center">{{t 'transaction.notfound'}}</h4>
+{{/if}}
+
+{{outlet}}

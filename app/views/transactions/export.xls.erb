@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Transactions">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">id</Data></Cell>
+        <Cell><Data ss:Type="String">label</Data></Cell>
+        <Cell><Data ss:Type="String">value</Data></Cell>
+        <Cell><Data ss:Type="String">type_transaction</Data></Cell>
+        <Cell><Data ss:Type="String">date_signed</Data></Cell>
+        <Cell><Data ss:Type="String">date_invoiced</Data></Cell>
+        <Cell><Data ss:Type="String">date_inc_paid</Data></Cell>
+        <Cell><Data ss:Type="String">date_out_paid</Data></Cell>
+        <Cell><Data ss:Type="String">date_to_pay</Data></Cell>
+        <Cell><Data ss:Type="String">status</Data></Cell>
+        <Cell><Data ss:Type="String">invoice_number</Data></Cell>
+        <Cell><Data ss:Type="String">notes</Data></Cell>
+      </Row>
+    <% @transactions.each do |transaction| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= transaction.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= transaction.label %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= transaction.value %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= transaction.type_transaction %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= transaction.date_signed %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= transaction.date_invoiced %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= transaction.date_inc_paid %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= transaction.date_out_paid %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= transaction.date_to_pay %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= transaction.status %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= transaction.invoice_number %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= transaction.notes %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

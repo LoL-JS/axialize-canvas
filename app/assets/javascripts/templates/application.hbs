@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <div class="navbar-form navbar-left" role="search">
+                    <div class="form-group has-feedback">
+                        {{input value=searchTerm class="form-control search-field" placeholderTranslation='transaction.search'}}
+                        {{#if searchTerm}}<span class="glyphicon glyphicon-remove form-control-feedback"{{action 'clearSearchTerm' on='click'}}></span>{{/if}}
+                    </div>
+                    <div class="form-group" style="margin-left: 10px;">
+                        <label class="control-label" style="font-weight: normal;">{{t 'transaction.filters.period'}}</label>
+                        {{view Ember.Select
+                        content=periodList
+                        optionValuePath="content.value"
+                        optionLabelPath="content.label"
+                        value=period class="form-control"}}
+                    </div>
+                </div>
+                <li>
+                    <p class="navbar-btn">
+                        <a href="#" {{action 'goToToday' target='controllers.transactions'}} class="btn btn-default">{{t 'transaction.today'}}</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container" id="main-container">
+    {{outlet}}
+</div>
+{{outlet loading}}
