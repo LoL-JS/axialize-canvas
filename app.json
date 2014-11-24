@@ -1,4 +1,5 @@
 {
 	"name": "Axialize for Salesforce",
-	"repository" = "https://github.com/Sylpheo/axialize-canvas" 
+	"description": "Collaborative cashflow software focused on cash balance, for a precise budget forecast",
+	"repository": "https://github.com/Sylpheo/axialize-canvas"
 }
