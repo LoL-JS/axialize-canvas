@@ -32,7 +32,7 @@ Please follow these steps to have Axialize correctly installed and set up :
 		<ul>Retrieve the <strong>Consumer Secret</strong> and put it in your heroku app config variables (Settings on project) with the following key : <code>CANVAS_CONSUMER_SECRET</code>
 	</ol>
     <ol>Create a <strong>Visualforce page</strong> and fill it with the following code :
-    	<code>
+    	<code 
     		<apex:page sidebar="false">
     			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     			<style>
@@ -55,7 +55,7 @@ Please follow these steps to have Axialize correctly installed and set up :
 	      			}
 				</script>
 			</apex:page>
-		</code>
+		/>
     </ol>
     <ol>Create a <strong>Visualforce tab</strong> and link it to the page we have just created.
 	</ol>
