@@ -55,9 +55,9 @@ Please follow these steps to have Axialize correctly installed and set up :
 				</script>
 			</apex:page>
 		
-  3. Create a <strong>Visualforce tab</strong> and link it to the page we have just created.
+3. Create a <strong>Visualforce tab</strong> and link it to the page we have just created.
 	
-  4. Don't forget to add access in your profile
+4. Don't forget to add access in your profile
 		* Add Axialize in <strong>Connected App Access</strong>
 
 Adapt Axialize to your needs
