@@ -22,11 +22,11 @@ Please follow these steps to have Axialize correctly installed and set up :
 1. Create a <strong>connected application</strong> called Axialize.
 
 * Check <strong>Enable OAuth Settings</strong>
-* Fill <strong>Callback URL</strong> with https://axialize-for-sf.herokuapp.com/oauth_callback</ul>
-* In <strong>Selected OAuth Scopes</strong>, select <strong>api</strong>, it should be enough</ul>
+* Fill <strong>Callback URL</strong> with https://axialize-for-sf.herokuapp.com/oauth_callback
+* In <strong>Selected OAuth Scopes</strong>, select <strong>api</strong>, it should be enough
 * Check <strong>Force.com Canvas</strong>
-	* Fill <strong>Canvas App URL</strong> with https://axialize-for-sf.herokuapp.com</ul>
-	* In <strong>Locations</strong>, select <strong>Visualforce Page</strong></ul>
+	* Fill <strong>Canvas App URL</strong> with https://axialize-for-sf.herokuapp.com
+	* In <strong>Locations</strong>, select <strong>Visualforce Page</strong>
 * When done, click on <strong>Manage</strong> and select <strong>Admin approved users are pre-authorized</strong> in <strong>Permitted users</strong>.
 * Retrieve the <strong>Consumer Secret</strong> and put it in your heroku app config variables (Settings on project) with the following key : <code>CANVAS_CONSUMER_SECRET</code>
 
@@ -58,7 +58,7 @@ Please follow these steps to have Axialize correctly installed and set up :
   3. Create a <strong>Visualforce tab</strong> and link it to the page we have just created.
 	
   4. Don't forget to add access in your profile
-		* Add Axialize in <strong>Connected App Access</strong></ul>
+		* Add Axialize in <strong>Connected App Access</strong>
 
 Adapt Axialize to your needs
 ----------------------------
