@@ -2,7 +2,8 @@ axialize-canvas
 ===============
 
 Axialize is a collaborative cashflow software focused on cash balance, for a precise budget forecast.
-More information here : <a href="http://www.axialize.com">.
+More information here : [http://www.axialize.com](http://www.axialize.com).
+
 Axialize for Salesforce allows you to use this software with <strong>Opportunity</strong> object.
 
 Install Axialize
