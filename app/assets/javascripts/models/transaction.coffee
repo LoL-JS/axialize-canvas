@@ -9,14 +9,17 @@ Axialize.Transaction = DS.Model.extend
 
   sum: 0
 
+  #define each late step (not closed)
   isLate: (->
     ['New', 'Analysis', 'Quote sent', 'Negociation', 'Verbal agreement'].contains(@get('stageName')) && (@get('closeDate') < moment().toDate())
   ).property 'stageName', 'closeDate'
 
+  #define each waiting step (not counted in balance)
   isWaiting: (->
     ['New', 'Analysis'].contains(@get('stageName')) && (@get('closeDate') >= moment().toDate())
   ).property 'stageName', 'closeDate'
 
+  #define here each step, in the good order
   isStatus1: (->
     @get('stageName') == 'New'
   ).property('stageName')

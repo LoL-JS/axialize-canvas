@@ -35,6 +35,7 @@ Axialize.TransactionBoxComponent = Ember.Component.extend
     @$().data('id', @get('transaction.id'))
   ).observes 'transaction'
   dateToShow: (->
+    #repeat here the closed stage name
     return @get('transaction.closeDate') if @get('transaction.stageName') == 'Closed won'
     null
   ).property('transaction.stageName', 'transaction.closeDate')

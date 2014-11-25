@@ -69,6 +69,7 @@ Axialize.TransactionsController = Ember.ArrayController.extend
 
       (wordsRegex.test(item.get('name')) || wordsRegex.test(item.get('description'))) && usersRegex.test(item.get('owner')) && inPeriod
     ).map((item) ->
+      #repeat each step which is counted in balance
       unless item.get('isLate')
         sum += parseFloat(item.get('amount')) if ['Quote sent', 'Negociation', 'Verbal agreement', 'Closed won'].contains item.get('stageName')
       item.set 'sum', sum

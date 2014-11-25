@@ -14,6 +14,7 @@ Axialize.TransactionCell = Ember.View.extend
   ).property('transaction.stageName')
 
   dateToShow: (->
+    #repeat here the closed stage name
     return @get('transaction.closeDate') if @get('stageName') == 'Closed won'
     null
   ).property('transaction.stageName', 'transaction.closeDate')

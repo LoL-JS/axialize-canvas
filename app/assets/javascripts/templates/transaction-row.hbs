@@ -1,5 +1,6 @@
 {{#if isTransaction}}
     <span class="date today-date">{{view.todayDate}}</span>
+    <!--Repeat each stage step name-->
     {{view Axialize.TransactionCell transaction=content stageName='New'}}<!--
 -->{{view Axialize.TransactionCell transaction=content stageName='Analysis'}}<!--
 -->{{view Axialize.TransactionCell transaction=content stageName='Quote sent'}}<!--
