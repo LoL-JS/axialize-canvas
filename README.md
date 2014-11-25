@@ -25,8 +25,8 @@ Please follow these steps to have Axialize correctly installed and set up :
 * Fill <strong>Callback URL</strong> with https://axialize-for-sf.herokuapp.com/oauth_callback</ul>
 * In <strong>Selected OAuth Scopes</strong>, select <strong>api</strong>, it should be enough</ul>
 * Check <strong>Force.com Canvas</strong>
-	** Fill <strong>Canvas App URL</strong> with https://axialize-for-sf.herokuapp.com</ul>
-	** In <strong>Locations</strong>, select <strong>Visualforce Page</strong></ul>
+	* Fill <strong>Canvas App URL</strong> with https://axialize-for-sf.herokuapp.com</ul>
+	* In <strong>Locations</strong>, select <strong>Visualforce Page</strong></ul>
 * When done, click on <strong>Manage</strong> and select <strong>Admin approved users are pre-authorized</strong> in <strong>Permitted users</strong>.
 * Retrieve the <strong>Consumer Secret</strong> and put it in your heroku app config variables (Settings on project) with the following key : <code>CANVAS_CONSUMER_SECRET</code>
 
@@ -77,14 +77,14 @@ In this example, steps must be in this order to work fine. <strong>New</strong> 
 If you have another process, you must follow these steps :
 	* Define your process : what is the meaning of each step
 	* In the file `app/assets/javascripts/models/transaction.coffee`:
-		** Define what are the late steps (before 100%)
-		** Define what are the waiting steps (the steps which are not counted in balance calculation)
-		** Repeat each step in each status to define display functionalities
+		* Define what are the late steps (before 100%)
+		* Define what are the waiting steps (the steps which are not counted in balance calculation)
+		* Repeat each step in each status to define display functionalities
 	* In the file `app/assets/javascripts/templates/transaction-row.hbs` :
-		** Repeat each step name
+		* Repeat each step name
 	* In the file `app/assets/javascripts/controllers/transactions-controller.coffee` :
-		** Repeat each step name which are counted in balance calculation
+		* Repeat each step name which are counted in balance calculation
 	* In the file `app/assets/javascripts/components/transaction-box-component.coffee` :
-		** Repeat closed step name
+		* Repeat closed step name
 	* In the file `app/assets/javascripts/views/transaction-cell.coffee` :
-		** Repeat closed step name
+		* Repeat closed step name
