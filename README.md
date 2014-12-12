@@ -5,6 +5,7 @@ Axialize is a collaborative cashflow software focused on cash balance, for a pre
 More information here : [http://www.axialize.com](http://www.axialize.com).
 
 Axialize for Salesforce allows you to use this software with <strong>Opportunity</strong> object.
+The source code is distributed under the GPL Licence.
 
 Install Axialize
 ----------------
