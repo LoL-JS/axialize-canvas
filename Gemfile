@@ -59,8 +59,6 @@ gem 'font-awesome-sass', '~> 4.2.0'
 
 gem 'momentjs-rails'
 
-gem 'toastr-rails-sass', '~> 2.0.1'
-
 gem 'bootstrap-datepicker-rails'
 
 gem 'attr_encrypted'
